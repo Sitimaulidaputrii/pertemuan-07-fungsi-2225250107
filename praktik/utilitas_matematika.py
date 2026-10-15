@@ -37,17 +37,23 @@ elif pilihan == "2":
 
 elif pilihan == "3":
     try:
-        n = int(input("Masukkan bilangan bulat nonnegatif n: "))  
-        print(f"Jumlah 1 sampai {n} = {jumlah_n(n)}")
+        n = int(input("Masukkan bilangan bulat nonnegatif n: "))
+        if n >= 0:
+            print(f"Jumlah 1 sampai {n} = {jumlah_n(n)}")
+        else:
+            print("Input tidak valid. Masukkan bilangan bulat nonnegatif.")    
     except ValueError:
-        print("Input tidak valid. Masukkan bilangan bulat nonnegatif.")    
+        print("Input tidak valid. Masukkan bilangan bulat nonnegatif.") 
 
 elif pilihan == "4":
     try:
-        n = int(input("Masukkan bilangan bulat nonnegatif n: "))     
-        print(f"{n}! = {faktorial(n)}")   
+        n = int(input("Masukkan bilangan bulat nonnegatif n: "))        
+        if n >= 0:
+            print(f"{n}! = {faktorial(n)}")   
+        else:
+            print("Input tidak valid. Masukkan bilangan bulat nonnegatif.")       
     except ValueError:
         print("Input tidak valid. Masukkan bilangan bulat nonnegatif.")      
 
 else:
-    print("Pilihan tidak valid.")
+    print("Pilihan tidak valid")          
